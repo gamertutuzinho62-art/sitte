@@ -19,11 +19,32 @@
 
     <div class="conteiner"><h2>99 noites </h2></div>
 
-<div id="center-popup" style="display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 35%; height: 10%; background-color: #0d0d3b; border-radius: 25px;">
-  <h2 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 24px; margin: 0;">Carrinho</h2>
+<div id="filtro-popup" style="display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 60%; height: 80%; background-color: #0d0d3b; border-radius: 25px;">
+  <button style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 28px; cursor: pointer; z-index: 10;" onclick="document.getElementById('filtro-popup').style.display = 'none';">×</button>
+  <h2 style="position: absolute; top: 10px; left: 10px; color: white; font-size: 24px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dicta suscipit consectetur, quo sed, ipsa sint expedita consequatur mollitia ipsum doloremque. Nemo quidem facere dolorem eos fugit molestias doloremque nihil.</h2>
+</div>
+
+<div id="entrar-popup" style="display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 60%; height: 80%; background-color: #0d0d3b; border-radius: 25px;">
+  <button style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 28px; cursor: pointer; z-index: 10;" onclick="document.getElementById('entrar-popup').style.display = 'none';">×</button>
+  <h2 style="position: absolute; top: 10px; left: 10px; color: white; font-size: 24px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dicta suscipit consectetur, quo sed, ipsa sint expedita consequatur mollitia ipsum doloremque. Nemo quidem facere dolorem eos fugit molestias doloremque nihil.</h2>
+</div>
+
+<div id="center-popup" style="display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 60%; height: 80%; background-color: #0d0d3b; border-radius: 25px;">
+  <button style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 28px; cursor: pointer; z-index: 10;" onclick="document.getElementById('center-popup').style.display = 'none';">×</button>
+  <h2 style="position: absolute; top: 10px; left: 10px; color: white; font-size: 24px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dicta suscipit consectetur, quo sed, ipsa sint expedita consequatur mollitia ipsum doloremque. Nemo quidem facere dolorem eos fugit molestias doloremque nihil.</h2>
 </div>
 
 <script>
+document.querySelector('h1:nth-of-type(1)').addEventListener('click', function() {
+  const popup = document.getElementById('filtro-popup');
+  popup.style.display = 'block';
+});
+
+document.querySelector('h1:nth-of-type(2)').addEventListener('click', function() {
+  const popup = document.getElementById('entrar-popup');
+  popup.style.display = 'block';
+});
+
 document.querySelector('h1:nth-of-type(3)').addEventListener('click', function() {
   const popup = document.getElementById('center-popup');
   popup.style.display = 'block';
