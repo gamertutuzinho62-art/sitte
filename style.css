@@ -3,16 +3,37 @@ body {
   margin: 0;
   background-color: black;
   position: relative;
+  overflow: hidden;
+}
+
+@keyframes brilho {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.brilho {
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.5) 50%, transparent 70%);
+  transform: rotate(45deg);
+  animation: brilho 3s infinite;
+  pointer-events: none;
 }
 
 .conteiner {
   width: 35%;
-  height: 10%;
+  height: 15%;
   background-color: #0d0d3b;
-  border-radius: 25px;
+  border-radius: 50px;
   position: absolute;
   left: 10px;
-  margin: 10px;
 }
 
 .conteiner:nth-of-type(1) {
@@ -20,22 +41,21 @@ body {
 }
 
 .conteiner:nth-of-type(2) {
-  top: calc(35px + 10vh + 10px);
+  top: calc(35px + 15vh + 20px);
 }
 
 .conteiner:nth-of-type(3) {
-  top: calc(35px + 20vh + 20px);
+  top: calc(35px + 30vh + 40px);
 }
 
 .conteiner:nth-of-type(4) {
-  top: calc(35px + 30vh + 30px);
+  top: calc(35px + 45vh + 60px);
 }
 
 .conteiner h2 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 10px;
+  left: 130px;
   color: white;
   font-size: 24px;
   margin: 0;
